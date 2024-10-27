@@ -1,0 +1,58 @@
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 10px;
+  }
+  
+  .login-form {
+    width: 100%;
+    max-width: 350px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 15px;
+    border: 2px solid rgba(255, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+  }
+  
+  ion-item {
+    --background: transparent;
+    --border-radius: 10px;
+    --color: #fff;
+    --placeholder-color: #aaa;
+    margin-bottom: 20px;
+  }
+  
+  ion-label {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  ion-input {
+    color: #fff;
+  }
+  
+  .recordar-usr {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    color: #fff;
+  }
+  
+  ion-button {
+    margin-top: 10px;
+    --border-radius: 10px;
+    font-weight: bold;
+  }
+  
+  .btn-oc {
+    --background: rgba(255, 0, 0, 0.7);
+  }
+  
+  .btn-cc {
+    --background: rgba(107, 56, 56, 0.26);
+    border: 1px solid rgba(255, 0, 0, 0.7);
+    --color: #fff;
+  }
+  
