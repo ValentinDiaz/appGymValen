@@ -1,0 +1,7 @@
+{
+  "name": "app-gym",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
