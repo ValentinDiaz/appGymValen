@@ -1,0 +1,39 @@
+<ion-content>
+  <app-header title="Crear Cuenta"></app-header>
+  <div class="background"></div>
+  <div class="content">
+    <div class="signup-form">
+      <form [formGroup]="form" (ngSubmit)="submit()">
+        <!-- Nombre de Usuario -->
+       
+
+        <!-- Correo Electrónico -->
+        <ion-item>
+          <ion-label position="floating">Correo Electrónico</ion-label>
+          <ion-input type="email" name="email" required formControlName="email"></ion-input>
+          @if (isRequired('email')) {         
+             <a>Este campo es requerido</a>
+          }       
+         </ion-item>
+
+        <!-- Contraseña -->
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input type="password" name="password" required formControlName="password"></ion-input>
+          @if (isRequired('password')) {         
+             <small>Este campo es requerido</small>
+          }
+        </ion-item>
+
+        <!-- Confirmar Contraseña -->
+        <!-- Botón Registrarse -->
+        <ion-button expand="block" class="btn-signup" type="submit">Registrarse</ion-button>
+        
+        <!-- Botón para iniciar sesión -->
+        <ion-button expand="block" [routerLink]="'/login'">
+          Iniciar Sesion
+        </ion-button>     
+       </form>
+    </div>
+  </div>
+</ion-content>

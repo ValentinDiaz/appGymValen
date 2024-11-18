@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonButton, IonCheckbox, IonItem, IonLabel, IonInput } from '@ionic/angular/standalone';
 import { HeaderComponent } from "../../components/header/header.component";
+import { RouterModule } from '@angular/router'; // Asegúrate de importar RouterModule
+
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
   standalone: true,
-  imports: [IonInput, IonLabel, IonItem, IonCheckbox, IonButton, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, HeaderComponent]
+  imports: [ReactiveFormsModule, RouterModule, IonInput, IonLabel, IonItem, IonCheckbox, IonButton, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, HeaderComponent]
 })
 export class LoginPage implements OnInit {
 
@@ -17,6 +19,8 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {
   }
+
+  
   labelHidden: Record<'username' | 'password', boolean> = {
     username: false,
     password: false
